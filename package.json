@@ -1,0 +1,48 @@
+{
+  "name": "node-express-barebones",
+  "version": "1.0.0",
+  "description": "Barebones NodeJS + Express web app with Babel and Mocha integrations.",
+  "main": "app.js",
+  "scripts": {
+    "start": "npm run build && npm run start-prod",
+    "build": "babel src -d dist",
+    "start-prod": "node dist/app.js",
+    "start-dev": "nodemon --exec babel-node src/app.js",
+    "test": "mocha --require babel-core/register './src/**/test/*.test.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NatashaKSS/node-express-barebones.git"
+  },
+  "author": "Natasha Koh Sze Sze",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NatashaKSS/node-express-barebones/issues"
+  },
+  "homepage": "https://github.com/NatashaKSS/node-express-barebones#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "request": "^2.81.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.3",
+    "babel-preset-env": "^1.7.0",
+    "chai": "^4.1.2",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jasmine": "^2.10.1",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-react": "^7.8.2",
+    "mocha": "^4.0.1",
+    "nodemon": "^1.11.0"
+  },
+  "engines": {
+    "node": "10.1.0"
+  },
+  "keywords": []
+}
